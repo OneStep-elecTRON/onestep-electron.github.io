@@ -1,13 +1,13 @@
 module.exports = {
-  title: "OneStep-elecTRON",
+  title: "onestep-electron.github.io",
   tagline: "ML is here!",
   url: "https://onestep-electron.github.io",
   baseUrl: "/",
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
   favicon: "img/favicon.ico",
-  organizationName: "facebook", // Usually your GitHub org/user name.
-  projectName: "docusaurus", // Usually your repo name.
+  organizationName: "OneStep-elecTRON", // Usually your GitHub org/user name.
+  projectName: "onestep-electron.github.io", // Usually your repo name.
   themeConfig: {
     navbar: {
       title: "My Site",
@@ -87,14 +87,12 @@ module.exports = {
         docs: {
           sidebarPath: require.resolve("./sidebars.js"),
           // Please change this to your repo.
-          editUrl:
-            "https://github.com/facebook/docusaurus/edit/master/website/",
+          editUrl: "https://github.com/OneStep-elecTRON/",
         },
         blog: {
           showReadingTime: true,
           // Please change this to your repo.
-          editUrl:
-            "https://github.com/facebook/docusaurus/edit/master/website/blog/",
+          editUrl: "https://github.com/OneStep-elecTRON/",
         },
         theme: {
           customCss: require.resolve("./src/css/custom.css"),
