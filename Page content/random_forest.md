@@ -6,7 +6,9 @@ Let's take a real life example here. Consider you have a data set with features 
 
 Once we have our outputs from the different models, we make use of a voting classifier. This helps us in considering the maximum outputs of one category. Basically, helps us in determing the output that has occured most number of times. This step is also known as **Aggregation**. Because of these steps, Bagging is also known as **Bootstrap Aggregation**. <br>
 
-*[Empty space for Image]*
+<p align="center">
+<img src="https://github.com/AM1CODES/onestep-electron.github.io/blob/main/Page%20content/Random-forest.png" alt="drawing" width="800"/>
+</p>
 
 Now the question arises, why should we prefer using Random forest over Decison trees? To answer this we need to know about a very important property of decision trees. All decision trees have Low bias and high variance. This basically means that the model would perform very well on the training data but when it comes to testing data, it doesn't perform very well. We want our models to have low bias and low variance and hence using Random forest over a single decision tree helps a lot as it is a combination of multiple decision trees and we take the majority of the results given by these decision trees which automatically turns the high variance into low variance. Even if we change the samples in our data, suppose we change 500 entries out of 2000 entries in our features data set, it won't affcet the model as the records are anyway distributed in different manner after feature and row sampling. Hence, Random forest is preffered over Decision trees.<br>
 
