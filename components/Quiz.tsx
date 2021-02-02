@@ -76,6 +76,7 @@ export const AnswerPanel: React.FC<AnswerPanelProps> = ({
     >
       {answers.map((answer, index) => (
         <button
+          key={index}
           onClick={() => handleOnClick(index)}
           style={{
             height: 45,
