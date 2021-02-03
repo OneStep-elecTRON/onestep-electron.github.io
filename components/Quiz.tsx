@@ -1,4 +1,6 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import axios from "../utils/api";
+import { getCookie } from "../utils/cookie";
 
 export const Quiz: React.FC = ({ children, ...props }) => {
   return (
@@ -48,9 +50,32 @@ export const AnswerPanel: React.FC<AnswerPanelProps> = ({
   ...props
 }) => {
   const [selectedIndex, setSelectedIndex] = useState(-1);
+  const [token, setToken] = useState(null);
+
+  useEffect(() => {
+    setToken(getCookie("token"));
+  });
+
   const handleOnClick = (index: number) => {
     if (selectedIndex === -1) {
+      // Means, if user havent attempted quiz yet
       setSelectedIndex(index);
+
+      if (token) {
+        // Send the response to server
+        axios
+          .patch("/quiz", {
+            headers: {
+              Authorization: `bearer ${token}`,
+            },
+          })
+          .then(({ data }) => {
+            console.log(data);
+          })
+          .catch((err) => {
+            console.log(err);
+          });
+      }
     }
   };
 

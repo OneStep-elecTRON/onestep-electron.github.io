@@ -36,7 +36,7 @@ function Signup() {
       .post("signup", {
         email: data.email,
         password: data.password,
-        username: data.email,
+        username: data.username,
       })
       .then(({ data }) => {
         console.log(data);
@@ -67,13 +67,17 @@ function Signup() {
           <div>Loading...</div>
         ) : (
           <form onSubmit={handleSubmit(onSubmit)} className="form">
-            <div className={'text ' + styles.errorMessage}>
+            <div className={"text " + styles.errorMessage}>
               {(errors.email && errors.email.message) ||
-              (errors.password && errors.password.message)}
+                (errors.password && errors.password.message)}
             </div>
             <div>
               <div className="text">Username</div>
-              <input name="username" ref={register} className={"input " + styles.inputBox} />
+              <input
+                name="username"
+                ref={register}
+                className={"input " + styles.inputBox}
+              />
             </div>
             <div>
               <div className="text">Email</div>
@@ -110,7 +114,10 @@ function Signup() {
               />
             </div>
             <div>
-              <button type="submit" className={"input button " + styles.signupButton}>
+              <button
+                type="submit"
+                className={"input button " + styles.signupButton}
+              >
                 Sign Up
               </button>
             </div>
