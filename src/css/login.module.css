@@ -1,3 +1,14 @@
+.main {
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+}
+
+.headerMessage {
+    color: var(--ifm-color-primary);
+    display: block;
+}
+
 .errorMessage {
     background-color: rgb(245, 173, 165);
     border: 1px solid red;

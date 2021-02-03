@@ -8,8 +8,8 @@ import styles from "./styles.module.css";
 
 const features = [
   {
-    title: "Easy to Use",
-    imageUrl: "img/undraw_docusaurus_mountain.svg",
+    title: "Easy Track",
+    imageUrl: "img/one-tier-pyramid.png",
     description: (
       <>
         Docusaurus was designed from the ground up to be easily installed and
@@ -18,8 +18,8 @@ const features = [
     ),
   },
   {
-    title: "Focus on What Matters",
-    imageUrl: "img/undraw_docusaurus_tree.svg",
+    title: "Intermediate Track",
+    imageUrl: "img/two-tier-pyramid.png",
     description: (
       <>
         Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
@@ -28,8 +28,8 @@ const features = [
     ),
   },
   {
-    title: "Powered by React",
-    imageUrl: "img/undraw_docusaurus_react.svg",
+    title: "Advanced Track",
+    imageUrl: "img/three-tier-pyramid.png",
     description: (
       <>
         Extend or customize your website layout by reusing React. Docusaurus can
@@ -43,13 +43,22 @@ function Feature({ imageUrl, title, description }) {
   const imgUrl = useBaseUrl(imageUrl);
   return (
     <div className={clsx("col col--4", styles.feature)}>
+      <div className="text--center">
       {imgUrl && (
-        <div className="text--center">
           <img className={styles.featureImage} src={imgUrl} alt={title} />
-        </div>
       )}
       <h3>{title}</h3>
       <p>{description}</p>
+      <Link
+              className={clsx(
+                "button button--outline button--secondary button--lg",
+                styles.getStarted
+              )}
+              to={useBaseUrl("docs")}
+            >
+              GET STARTED
+            </Link>
+      </div>
     </div>
   );
 }
@@ -59,22 +68,23 @@ function Home() {
   const { siteConfig = {} } = context;
   return (
     <Layout
-      title={`Hello from ${siteConfig.title}`}
+      title={siteConfig.title}
       description="Description will go into a meta tag in <head />"
     >
       <header className={clsx("hero hero--primary", styles.heroBanner)}>
         <div className="container">
-          <h1 className="hero__title">{siteConfig.title}</h1>
+          <img className={styles.logo} src='img/logo-allblack-full.png' alt='One Step Logo' />
+          {/* <h1 className="hero__title">{siteConfig.title}</h1> */}
           <p className="hero__subtitle">{siteConfig.tagline}</p>
           <div className={styles.buttons}>
             <Link
               className={clsx(
                 "button button--outline button--secondary button--lg",
-                styles.getStarted
+                styles.login
               )}
-              to={useBaseUrl("signup")}
+              to={useBaseUrl("login")}
             >
-              Sign Up
+              LOG IN
             </Link>
           </div>
         </div>
