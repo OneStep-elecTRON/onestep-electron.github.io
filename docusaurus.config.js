@@ -1,6 +1,6 @@
 module.exports = {
-  title: "onestep-electron.github.io",
-  tagline: "ML is here!",
+  title: "One Step",
+  tagline: "Everything ML.",
   url: "https://onestep-electron.github.io",
   baseUrl: "/",
   onBrokenLinks: "throw",
@@ -10,10 +10,10 @@ module.exports = {
   projectName: "onestep-electron.github.io", // Usually your repo name.
   themeConfig: {
     navbar: {
-      title: "My Site",
+      title: "One Step",
       logo: {
-        alt: "My Site Logo",
-        src: "img/logo.svg",
+        alt: "onestep-logo",
+        src: "img/logo-allblack-half.png",
       },
       items: [
         {
@@ -23,7 +23,7 @@ module.exports = {
           position: "left",
         },
         {
-          href: "https://github.com/facebook/docusaurus",
+          href: "https://github.com/OneStep-elecTRON/onestep-electron.github.io",
           label: "GitHub",
           position: "right",
         },
@@ -72,12 +72,12 @@ module.exports = {
           items: [
             {
               label: "GitHub",
-              href: "https://github.com/facebook/docusaurus",
+              href: "https://github.com/OneStep-elecTRON/onestep-electron.github.io",
             },
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} One Step, Inc. Built with Docusaurus.`,
     },
   },
   presets: [
