@@ -60,10 +60,11 @@ function Signup() {
       title={`Hello from ${siteConfig.title}`}
       description="Description will go into a meta tag in <head />"
     >
-      <main className="main">
+      <main className={styles.main}>
         {loading ? (
           <div>Loading...</div>
-        ) : (
+        ) : (<>
+          <h1 className={styles.headerMessage}>Pick up right where you left off.</h1>
           <form onSubmit={handleSubmit(onSubmit)} className="form">
             <div className={'text ' + styles.errorMessage}>
                 {(errors.email && errors.email.message) ||
@@ -104,6 +105,7 @@ function Signup() {
               Don't have an account?
             </Link>
           </form>
+          </>
         )}
       </main>
     </Layout>
