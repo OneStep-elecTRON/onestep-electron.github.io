@@ -11,6 +11,7 @@ import axios from "../../utils/api";
 import { setCookie } from "../../utils/cookie";
 
 import "../css/components.css";
+import styles from "../css/signup.module.css";
 
 interface IFormInput {
   email: string;
@@ -66,9 +67,13 @@ function Signup() {
           <div>Loading...</div>
         ) : (
           <form onSubmit={handleSubmit(onSubmit)} className="form">
+            <div className={'text ' + styles.errorMessage}>
+              {(errors.email && errors.email.message) ||
+              (errors.password && errors.password.message)}
+            </div>
             <div>
               <div className="text">Username</div>
-              <input name="username" ref={register} className="input" />
+              <input name="username" ref={register} className={"input " + styles.inputBox} />
             </div>
             <div>
               <div className="text">Email</div>
@@ -82,7 +87,7 @@ function Signup() {
                     message: "Invalid email address.",
                   },
                 })}
-                className="input"
+                className={"input " + styles.inputBox}
               />
             </div>
             <div>
@@ -94,22 +99,18 @@ function Signup() {
                   required: { value: true, message: "Password required." },
                   minLength: {
                     value: 5,
-                    message: "Min length is 5.",
+                    message: "Password should be at least 5 characters long.",
                   },
                   maxLength: {
                     value: 30,
-                    message: "Max length is 30.",
+                    message: "Password should be at least 5 characters long.",
                   },
                 })}
-                className="input"
+                className={"input " + styles.inputBox}
               />
             </div>
             <div>
-              <div className="text">
-                {(errors.email && errors.email.message) ||
-                  (errors.password && errors.password.message)}
-              </div>
-              <button type="submit" className="input button">
+              <button type="submit" className={"input button " + styles.signupButton}>
                 Sign Up
               </button>
             </div>

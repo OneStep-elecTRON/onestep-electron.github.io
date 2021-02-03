@@ -8,22 +8,50 @@
   margin-right: auto;
 }
 
+.username {
+  color: var(--ifm-color-primary);
+}
+
+.logoutButton {
+  font-size: medium;
+  padding: 10px;
+  border: none;
+  border-radius: 7px;
+  background-color: #fff;
+}
+
+.logoutButton:hover {
+  color: var(--ifm-color-primary);
+}
+
 .section {
   display: flex;
-  gap: 1rem;
   width: 42rem;
+  flex-direction: column;
 }
 
 .card {
   flex: 1;
-  padding: 15px;
+  padding: 20px;
   border: 1px solid #dedede;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
+  margin: 20px;
+}
+
+.card:hover {
+  background-color: var(--ifm-color-primary);
+  color: white
 }
 
 .title {
   font-weight: bold;
   font-size: large;
+}
+
+@media(min-width: 500px) {
+  .section {
+      flex-direction: row;
+  }
 }
