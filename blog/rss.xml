@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <rss version="2.0">
     <channel>
-        <title>onestep-electron.github.io Blog</title>
+        <title>One Step Blog</title>
         <link>https://onestep-electron.github.io/blog</link>
-        <description>onestep-electron.github.io Blog</description>
+        <description>One Step Blog</description>
         <lastBuildDate>Sun, 25 Oct 2015 23:29:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>

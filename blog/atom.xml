@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://onestep-electron.github.io/blog</id>
-    <title>onestep-electron.github.io Blog</title>
+    <title>One Step Blog</title>
     <updated>2015-10-25T23:29:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://onestep-electron.github.io/blog"/>
-    <subtitle>onestep-electron.github.io Blog</subtitle>
+    <subtitle>One Step Blog</subtitle>
     <icon>https://onestep-electron.github.io/img/favicon.ico</icon>
 </feed>
