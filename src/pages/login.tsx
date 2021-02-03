@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { useHistory } from "react-router-dom";
 import clsx from "clsx";
 import Layout from "@theme/Layout";
@@ -13,62 +13,77 @@ import { setCookie } from "../../utils/cookie";
 import "../css/components.css";
 import styles from "../css/login.module.css";
 
+// Global Store
+import { GlobalContext } from "../../store/GlobalStateProvider";
+
 interface IFormInput {
   email: string;
   password: string;
 }
 
-function Signup() {
+const LoginPanel = () => {
+  const [userData, setUserData] = useContext(GlobalContext);
   const [loading, setLoading] = useState(false);
-
   const [error, setError] = useState(null);
-
   const { register, errors, handleSubmit } = useForm<IFormInput>({
     mode: "all",
   });
-
   const history = useHistory();
 
-  const onSubmit: SubmitHandler<IFormInput> = (data) => {
+  useEffect(() => {
+    if (userData) {
+      console.log(userData);
+      // Route to account
+      history.replace("/me");
+    }
+  }, [userData]);
+
+  const onSubmit: SubmitHandler<IFormInput> = (payload) => {
     setLoading(true);
     axios
-      .post("signin", {
-        email: data.email,
-        password: data.password,
-      })
+      .post("signin", payload)
       .then(({ data }) => {
-        console.log(data);
         if (data.data) {
+          // Set token.
           setCookie("token", data.data.token);
-          history.replace("/me");
+          // Get userData.
+          axios
+            .get("/", {
+              headers: {
+                Authorization: `bearer ${data.data.token}`,
+              },
+            })
+            .then(({ data }) => {
+              setUserData({ ...data.data });
+            })
+            .catch((err) => {
+              console.log(err);
+            });
         } else {
           setError(data.message || data[0].msg);
           setLoading(false);
         }
       })
-      .catch(({ response }) => {
-        setError(response.data.error);
+      .catch((error) => {
+        // Request error
+        setError(error.message);
         setLoading(false);
       });
   };
 
-  const context = useDocusaurusContext();
-  const { siteConfig = {} } = context;
-
   return (
-    <Layout
-      title={`Hello from ${siteConfig.title}`}
-      description="Description will go into a meta tag in <head />"
-    >
-      <main className={styles.main}>
-        {loading ? (
-          <div>Loading...</div>
-        ) : (<>
-          <h1 className={styles.headerMessage}>Pick up right where you left off.</h1>
+    <main className={styles.main}>
+      {loading ? (
+        <div>Loading...</div>
+      ) : (
+        <>
+          <h1 className={styles.headerMessage}>
+            Pick up right where you left off.
+          </h1>
           <form onSubmit={handleSubmit(onSubmit)} className="form">
-            <div className={'text ' + styles.errorMessage}>
-                {(errors.email && errors.email.message) ||
-                  (errors.password && errors.password.message)}
+            <div className={"text " + styles.errorMessage}>
+              {(errors.email && errors.email.message) ||
+                (errors.password && errors.password.message)}
             </div>
             <div>
               <div className="text">Email</div>
@@ -97,7 +112,10 @@ function Signup() {
               />
             </div>
             <div>
-              <button type="submit" className={"input button " + styles.loginButton}>
+              <button
+                type="submit"
+                className={"input button " + styles.loginButton}
+              >
                 Log In
               </button>
             </div>
@@ -105,11 +123,24 @@ function Signup() {
               Don't have an account?
             </Link>
           </form>
-          </>
-        )}
-      </main>
+        </>
+      )}
+    </main>
+  );
+};
+
+function Login() {
+  const context = useDocusaurusContext();
+  const { siteConfig = {} } = context;
+
+  return (
+    <Layout
+      title={`Hello from ${siteConfig.title}`}
+      description="Description will go into a meta tag in <head />"
+    >
+      <LoginPanel />
     </Layout>
   );
 }
 
-export default Signup;
+export default Login;
