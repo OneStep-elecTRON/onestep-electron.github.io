@@ -1,6 +1,11 @@
-import React, { createContext, useContext } from "react";
+import React, {
+  createContext,
+  Dispatch,
+  SetStateAction,
+  useState,
+} from "react";
 
-interface UserData {
+export interface UserData {
   id: string;
   username: string;
   email: string;
@@ -23,20 +28,20 @@ interface UserData {
   };
 }
 
-interface GlobalState {
-  userData: UserData;
-  count: number;
-}
+// As we have only one state.
+// Later, we can implement useReducer to manage multiple states.
 
-export const globalState: GlobalState = {
-  userData: null,
-  count: 5,
-};
+// Initial State
+const userData: UserData = null;
 
-export const GlobalContext = createContext<GlobalState>(null);
+// Global Context
+export const GlobalContext = createContext<
+  [UserData, Dispatch<SetStateAction<UserData>>]
+>(null);
 
+// Global State Provider
 export const GlobalStateProvider: React.FC = ({ children }) => {
-  const value = useContext(GlobalContext);
+  const value = useState(userData);
   return (
     <GlobalContext.Provider value={value}>{children}</GlobalContext.Provider>
   );

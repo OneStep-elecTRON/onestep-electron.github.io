@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { useHistory } from "react-router-dom";
 import clsx from "clsx";
 import Layout from "@theme/Layout";
@@ -12,6 +12,7 @@ import { setCookie } from "../../utils/cookie";
 
 import "../css/components.css";
 import styles from "../css/signup.module.css";
+import { GlobalContext } from "../../store/GlobalStateProvider";
 
 interface IFormInput {
   email: string;
@@ -19,53 +20,61 @@ interface IFormInput {
   password: string;
 }
 
-function Signup() {
+const SingupPanel = () => {
+  const [userData, setUserData] = useContext(GlobalContext);
   const [loading, setLoading] = useState(false);
-
   const [error, setError] = useState(null);
-
   const { register, errors, handleSubmit } = useForm<IFormInput>({
     mode: "all",
   });
-
   const history = useHistory();
 
-  const onSubmit: SubmitHandler<IFormInput> = (data) => {
+  useEffect(() => {
+    if (userData) {
+      console.log(userData);
+      // Route to account
+      history.replace("/me");
+    }
+  }, [userData]);
+
+  const onSubmit: SubmitHandler<IFormInput> = async (payload) => {
     setLoading(true);
-    axios
-      .post("signup", {
-        email: data.email,
-        password: data.password,
-        username: data.username,
-      })
-      .then(({ data }) => {
-        console.log(data);
-        if (data.data) {
-          setCookie("token", data.data.token);
-          history.replace("/me");
-        } else {
-          setError(data.message || data[0].msg);
-          setLoading(false);
-        }
-      })
-      .catch(({ response }) => {
-        setError(response.data.error);
+    try {
+      const response = await axios.post("signup", payload);
+      const { data } = response;
+      if (data.data) {
+        // Set token.
+        setCookie("token", data.data.token);
+        // Get userData.
+        axios
+          .get("/", {
+            headers: {
+              Authorization: `bearer ${data.data.token}`,
+            },
+          })
+          .then(({ data }) => {
+            setUserData({ ...data.data });
+          })
+          .catch((err) => {
+            console.log(err);
+          });
+      } else {
+        setError(data.message || data[0].msg);
         setLoading(false);
-      });
+      }
+    } catch (error) {
+      // Request error
+      setError(error.message);
+      setLoading(false);
+    }
   };
 
-  const context = useDocusaurusContext();
-  const { siteConfig = {} } = context;
-
   return (
-    <Layout
-      title={`Hello from ${siteConfig.title}`}
-      description="Description will go into a meta tag in <head />"
-    >
-      <main className={styles.main}>
-        {loading ? (
-          <div>Loading...</div>
-        ) : (<>
+    <main className={styles.main}>
+      {loading ? (
+        <div>Loading...</div>
+      ) : (
+        <>
           <h1 className={styles.headerMessage}>Register now for free.</h1>
           <form onSubmit={handleSubmit(onSubmit)} className="form">
             <div className={"text " + styles.errorMessage}>
@@ -126,9 +135,22 @@ function Signup() {
               Already have an account?
             </Link>
           </form>
-          </>
-        )}
-      </main>
+        </>
+      )}
+    </main>
+  );
+};
+
+function Signup() {
+  const context = useDocusaurusContext();
+  const { siteConfig = {} } = context;
+
+  return (
+    <Layout
+      title={`Hello from ${siteConfig.title}`}
+      description="Description will go into a meta tag in <head />"
+    >
+      <SingupPanel />
     </Layout>
   );
 }

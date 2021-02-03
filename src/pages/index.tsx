@@ -1,10 +1,13 @@
-import React from "react";
+import React, { useContext } from "react";
 import clsx from "clsx";
 import Layout from "@theme/Layout";
 import Link from "@docusaurus/Link";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import useBaseUrl from "@docusaurus/useBaseUrl";
 import styles from "./styles.module.css";
+
+// Global Store
+import { GlobalContext } from "../../store/GlobalStateProvider";
 
 const features = [
   {
@@ -44,24 +47,41 @@ function Feature({ imageUrl, title, description }) {
   return (
     <div className={clsx("col col--4", styles.feature)}>
       <div className="text--center">
-      {imgUrl && (
+        {imgUrl && (
           <img className={styles.featureImage} src={imgUrl} alt={title} />
-      )}
-      <h3>{title}</h3>
-      <p>{description}</p>
-      <Link
-              className={clsx(
-                "button button--outline button--secondary button--lg",
-                styles.getStarted
-              )}
-              to={useBaseUrl("docs")}
-            >
-              GET STARTED
-            </Link>
+        )}
+        <h3>{title}</h3>
+        <p>{description}</p>
+        <Link
+          className={clsx(
+            "button button--outline button--secondary button--lg",
+            styles.getStarted
+          )}
+          to={useBaseUrl("docs")}
+        >
+          GET STARTED
+        </Link>
       </div>
     </div>
   );
 }
+
+const GetStartedButton = () => {
+  const [userData] = useContext(GlobalContext);
+  return (
+    <div className={styles.buttons}>
+      <Link
+        className={clsx(
+          "button button--outline button--secondary button--lg",
+          styles.login
+        )}
+        to={useBaseUrl(userData ? "docs" : "login")}
+      >
+        {userData ? "Keep Learning" : "Log In"}
+      </Link>
+    </div>
+  );
+};
 
 function Home() {
   const context = useDocusaurusContext();
@@ -73,20 +93,14 @@ function Home() {
     >
       <header className={clsx("hero hero--primary", styles.heroBanner)}>
         <div className="container">
-          <img className={styles.logo} src='img/logo-allblack-full.png' alt='One Step Logo' />
+          <img
+            className={styles.logo}
+            src="img/logo-allblack-full.png"
+            alt="One Step Logo"
+          />
           {/* <h1 className="hero__title">{siteConfig.title}</h1> */}
           <p className="hero__subtitle">{siteConfig.tagline}</p>
-          <div className={styles.buttons}>
-            <Link
-              className={clsx(
-                "button button--outline button--secondary button--lg",
-                styles.login
-              )}
-              to={useBaseUrl("login")}
-            >
-              LOG IN
-            </Link>
-          </div>
+          <GetStartedButton />
         </div>
       </header>
       <main>
