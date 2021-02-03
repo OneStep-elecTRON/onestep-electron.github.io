@@ -92,24 +92,26 @@ function Me() {
       title={`Hello from ${siteConfig.title}`}
       description="Description will go into a meta tag in <head />"
     >
-      <main className={styles.main}>
-        <div>Welcome to account!!!</div>
+        <main className={styles.main}>
         {token && userData && (
           <>
-            <div className={styles.card}>
-              <div>Username: {userData.username}</div>
-              <div>Email: {userData.email}</div>
+            <div>
+              <h1>Welcome back, <span className={styles.username}>{userData.username}!</span></h1>
+              <h4>Your Email ID: {userData.email}</h4>
               <div>
-                <button onClick={handleLogout}>Logout</button>
+                <button className={styles.logoutButton} onClick={handleLogout}>Logout</button>
               </div>
             </div>
-            <div className={styles.section}>
+            <div>
+            <div>
+              <h1>Here's how you're doing.</h1>
+              <div className={styles.section}>
               <div className={styles.card}>
                 <div className={styles.title}>Basic</div>
                 <div>
                   <div>Progress: {userData.track.basic.progress}</div>
                   <div>
-                    Quiz Solved: {userData.track.basic.quizScore}/
+                    Quizzes Solved: {userData.track.basic.quizScore}/
                     {userData.track.basic.totalQuizAnswered}
                   </div>
                 </div>
@@ -119,7 +121,7 @@ function Me() {
                 <div>
                   <div>Progress: {userData.track.intermediate.progress}</div>
                   <div>
-                    Quiz Solved: {userData.track.intermediate.quizScore}/
+                    Quizzes Solved: {userData.track.intermediate.quizScore}/
                     {userData.track.intermediate.totalQuizAnswered}
                   </div>
                 </div>
@@ -129,11 +131,13 @@ function Me() {
                 <div>
                   <div>Progress: {userData.track.advanced.progress}</div>
                   <div>
-                    Quiz Solved: {userData.track.advanced.quizScore}/
+                    Quizzes Solved: {userData.track.advanced.quizScore}/
                     {userData.track.advanced.totalQuizAnswered}
                   </div>
                 </div>
               </div>
+            </div>
+            </div>
             </div>
           </>
         )}

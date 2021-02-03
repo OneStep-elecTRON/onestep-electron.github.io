@@ -11,6 +11,7 @@ import axios from "../../utils/api";
 import { setCookie } from "../../utils/cookie";
 
 import "../css/components.css";
+import styles from "../css/login.module.css";
 
 interface IFormInput {
   email: string;
@@ -64,6 +65,10 @@ function Signup() {
           <div>Loading...</div>
         ) : (
           <form onSubmit={handleSubmit(onSubmit)} className="form">
+            <div className={'text ' + styles.errorMessage}>
+                {(errors.email && errors.email.message) ||
+                  (errors.password && errors.password.message)}
+            </div>
             <div>
               <div className="text">Email</div>
               <input
@@ -76,7 +81,7 @@ function Signup() {
                     message: "Invalid email address.",
                   },
                 })}
-                className="input"
+                className={"input " + styles.inputBox}
               />
             </div>
             <div>
@@ -87,20 +92,16 @@ function Signup() {
                 ref={register({
                   required: { value: true, message: "Password required." },
                 })}
-                className="input"
+                className={"input " + styles.inputBox}
               />
             </div>
             <div>
-              <div className="text">
-                {(errors.email && errors.email.message) ||
-                  (errors.password && errors.password.message)}
-              </div>
-              <button type="submit" className="input button">
+              <button type="submit" className={"input button " + styles.loginButton}>
                 Log In
               </button>
             </div>
             <Link to="/signup" className="text">
-              Need an account? Register
+              Don't have an account?
             </Link>
           </form>
         )}
