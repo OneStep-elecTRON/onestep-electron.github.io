@@ -37,6 +37,10 @@ To serve as an example page when styling markdown based Docusaurus sites.
 
 ---
 
+<iframe src="https://trinket.io/embed/python3/8cbde20f2e" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+
+---
+
 ## Emphasis
 
 Emphasis, aka italics, with _asterisks_ or _underscores_.
