@@ -2,7 +2,6 @@
 id: doc1
 title: Style Guide
 sidebar_label: Style Guide
-slug: /
 ---
 
 import { Quiz, Question, AnswerPanel } from "../components/Quiz";

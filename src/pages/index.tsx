@@ -15,34 +15,34 @@ const features = [
     imageUrl: "img/one-tier-pyramid.png",
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        Decision Tree, K-Means, Random Forest, SVM, KNN.
       </>
     ),
+    baseUrl: "docs/EasyTrack/"
   },
   {
     title: "Intermediate Track",
     imageUrl: "img/two-tier-pyramid.png",
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        Coming soon.
       </>
     ),
+    baseUrl: "docs/IntermediateTrack/"
   },
   {
     title: "Advanced Track",
     imageUrl: "img/three-tier-pyramid.png",
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        Coming soon.
       </>
     ),
+    baseUrl: "docs/AdvancedTrack/"
   },
 ];
 
-function Feature({ imageUrl, title, description }) {
+function Feature({ imageUrl, title, description, baseUrl }) {
   const imgUrl = useBaseUrl(imageUrl);
   return (
     <div className={clsx("col col--4", styles.feature)}>
@@ -51,13 +51,13 @@ function Feature({ imageUrl, title, description }) {
           <img className={styles.featureImage} src={imgUrl} alt={title} />
         )}
         <h3>{title}</h3>
-        <p>{description}</p>
+        <div className={styles.featureDescription}><p>{description}</p></div>
         <Link
           className={clsx(
             "button button--outline button--secondary button--lg",
             styles.getStarted
           )}
-          to={useBaseUrl("docs")}
+          to={useBaseUrl(baseUrl)}
         >
           GET STARTED
         </Link>
