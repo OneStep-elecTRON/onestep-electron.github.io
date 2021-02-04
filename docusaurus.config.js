@@ -41,13 +41,17 @@ module.exports = {
           title: "Docs",
           items: [
             {
-              label: "Style Guide",
-              to: "docs/",
+              label: "Easy Track",
+              to: "docs/EasyTrack/",
             },
             {
-              label: "Second Doc",
-              to: "docs/doc2/",
+              label: "Intermediate Track",
+              to: "docs/IntermediateTrack/",
             },
+            {
+              label: "Advanced Track",
+              to: "docs/AdvancedTrack/",
+            }
           ],
         },
         {

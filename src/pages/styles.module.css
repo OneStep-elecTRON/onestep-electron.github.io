@@ -40,6 +40,10 @@
   width: 200px;
 }
 
+.featureDescription {
+  height: 70px;
+}
+
 .logo {
   margin: 10px;
   padding: 0;
