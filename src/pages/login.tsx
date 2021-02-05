@@ -32,7 +32,6 @@ const LoginPanel = () => {
 
   useEffect(() => {
     if (userData) {
-      console.log(userData);
       // Route to account
       history.replace("/me");
     }
