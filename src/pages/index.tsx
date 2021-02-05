@@ -13,32 +13,20 @@ const features = [
   {
     title: "Easy Track",
     imageUrl: "img/one-tier-pyramid.png",
-    description: (
-      <>
-        Decision Tree, K-Means, Random Forest, SVM, KNN.
-      </>
-    ),
-    baseUrl: "docs/EasyTrack/"
+    description: <>Decision Tree, K-Means, Random Forest, SVM, KNN.</>,
+    baseUrl: "docs/EasyTrack/",
   },
   {
     title: "Intermediate Track",
     imageUrl: "img/two-tier-pyramid.png",
-    description: (
-      <>
-        Coming soon.
-      </>
-    ),
-    baseUrl: "docs/IntermediateTrack/"
+    description: <>Coming soon.</>,
+    baseUrl: "docs/IntermediateTrack/",
   },
   {
     title: "Advanced Track",
     imageUrl: "img/three-tier-pyramid.png",
-    description: (
-      <>
-        Coming soon.
-      </>
-    ),
-    baseUrl: "docs/AdvancedTrack/"
+    description: <>Coming soon.</>,
+    baseUrl: "docs/AdvancedTrack/",
   },
 ];
 
@@ -51,7 +39,9 @@ function Feature({ imageUrl, title, description, baseUrl }) {
           <img className={styles.featureImage} src={imgUrl} alt={title} />
         )}
         <h3>{title}</h3>
-        <div className={styles.featureDescription}><p>{description}</p></div>
+        <div className={styles.featureDescription}>
+          <p>{description}</p>
+        </div>
         <Link
           className={clsx(
             "button button--outline button--secondary button--lg",
@@ -75,7 +65,7 @@ const GetStartedButton = () => {
           "button button--outline button--secondary button--lg",
           styles.login
         )}
-        to={useBaseUrl(userData ? "docs" : "login")}
+        to={useBaseUrl(userData ? "docs/learning-tracks" : "login")}
       >
         {userData ? "Keep Learning" : "Log In"}
       </Link>
@@ -126,12 +116,18 @@ function Home() {
             <div className="row">
               <div className={clsx("col col--6")}>
                 <div className="text--center">
-                  <img className={styles.crashCourseImage} src={'img/python-logo.png'} alt='python logo' />
+                  <img
+                    className={styles.crashCourseImage}
+                    src={"img/python-logo.png"}
+                    alt="python logo"
+                  />
                 </div>
               </div>
               <div className={clsx("col col--6")}>
                 <div className="text--center">
-                  <p className={styles.crashCourseDescription}>Descripiton of crash course comes here.</p>
+                  <p className={styles.crashCourseDescription}>
+                    Descripiton of crash course comes here.
+                  </p>
                   <Link
                     className={clsx(
                       "button button--outline button--secondary button--lg",
