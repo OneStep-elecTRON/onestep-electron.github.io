@@ -17,8 +17,8 @@ module.exports = {
       },
       items: [
         {
-          to: "docs/learning-tracks",
-          label: "Learning Tracks",
+          to: "docs/machine-learning-tracks",
+          label: "ML Tracks",
           position: "left",
         },
         {
@@ -42,7 +42,7 @@ module.exports = {
       style: "dark",
       links: [
         {
-          title: "Learn",
+          title: "Machine Learning",
           items: [
             {
               label: "Easy Track",
@@ -59,27 +59,19 @@ module.exports = {
           ],
         },
         {
-          title: "Community",
+          title: "Python",
           items: [
             {
-              label: "Stack Overflow",
-              href: "https://stackoverflow.com/questions/tagged/docusaurus",
-            },
-            {
-              label: "Discord",
-              href: "https://discordapp.com/invite/docusaurus",
-            },
-            {
-              label: "Twitter",
-              href: "https://twitter.com/docusaurus",
+              label: "Crash Course",
+              href: "docs/python-crash-course",
             },
           ],
         },
         {
-          title: "More",
+          title: "Data Science",
           items: [
             {
-              label: "GitHub",
+              label: "Coming Soon",
               href: "https://github.com/OneStep-elecTRON/onestep-electron.github.io",
             },
           ],

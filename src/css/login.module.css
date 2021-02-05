@@ -8,14 +8,20 @@
 .headerMessage {
     color: var(--ifm-color-primary);
     display: block;
+    margin-top: 30px;
+}
+
+.loginForm {
+    margin-bottom: 30px;
 }
 
 .errorMessage {
-    background-color: rgb(245, 173, 165);
+    background-color: rgb(240, 136, 124);
     border: 1px solid red;
     box-sizing: border-box;
     border-radius: 4px;
     padding: 8px 10px;
+    color: black;
 }
 
 .errorMessage:empty {
@@ -25,7 +31,13 @@
 .inputBox {
     color: var(--ifm-color-primary);
 }
-  
+
+.loginButton {
+    margin-top: 20px;
+    color: white;
+    border: 1px solid var(--ifm-color-primary);
+}
+
 .loginButton:hover {
     background-color: var(--ifm-color-primary);
     color: white;

@@ -98,7 +98,7 @@ function Home() {
           <section className={styles.features}>
             <div className="container">
               <div className="row">
-                <h1 className={styles.featuresTitle}>LEARNING TRACKS</h1>
+                <h1 className={styles.featuresTitle}>MACHINE LEARNING TRACKS</h1>
               </div>
               <div className="row">
                 {features.map((props, idx) => (
