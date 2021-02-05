@@ -75,7 +75,7 @@ const GetStartedButton = () => {
           "button button--outline button--secondary button--lg",
           styles.login
         )}
-        to={useBaseUrl(userData ? "docs" : "login")}
+        to={useBaseUrl(userData ? "docs/learning-tracks" : "login")}
       >
         {userData ? "Keep Learning" : "Log In"}
       </Link>
@@ -108,7 +108,7 @@ function Home() {
           <section className={styles.features}>
             <div className="container">
               <div className="row">
-                <h1 className={styles.featuresTitle}>LEARNING TRACKS</h1>
+                <h1 className={styles.featuresTitle}>MACHINE LEARNING TRACKS</h1>
               </div>
               <div className="row">
                 {features.map((props, idx) => (

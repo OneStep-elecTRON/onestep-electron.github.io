@@ -70,7 +70,7 @@ const SingupPanel = () => {
       ) : (
         <>
           <h1 className={styles.headerMessage}>Register now for free.</h1>
-          <form onSubmit={handleSubmit(onSubmit)} className="form">
+          <form onSubmit={handleSubmit(onSubmit)} className={"form " + styles.signupForm}>
             <div className={"text " + styles.errorMessage}>
               {(errors.email && errors.email.message) ||
                 (errors.password && errors.password.message)}

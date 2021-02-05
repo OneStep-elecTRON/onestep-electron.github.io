@@ -75,7 +75,7 @@ const LoginPanel = () => {
           <h1 className={styles.headerMessage}>
             Pick up right where you left off.
           </h1>
-          <form onSubmit={handleSubmit(onSubmit)} className="form">
+          <form onSubmit={handleSubmit(onSubmit)} className={"form " + styles.loginForm}>
             <div className={"text " + styles.errorMessage}>
               {(errors.email && errors.email.message) ||
                 (errors.password && errors.password.message)}
