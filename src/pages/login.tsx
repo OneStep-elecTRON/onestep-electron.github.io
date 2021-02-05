@@ -47,7 +47,11 @@ const LoginPanel = () => {
           setCookie("token", data.data.token);
           // Get userData.
           axios
-            .get("/")
+            .get("/", {
+              headers: {
+                authorization: `Bearer ${data.data.token}`,
+              },
+            })
             .then(({ data }) => {
               setUserData({ ...data.data });
             })

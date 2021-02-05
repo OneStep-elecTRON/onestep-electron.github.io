@@ -3,6 +3,7 @@ import clsx from "clsx";
 import update from "immutability-helper";
 
 import axios from "../utils/api";
+import { eraseCookie, getCookie } from "../utils/cookie";
 import styles from "../src/css/quiz.module.css";
 
 // Global Store
@@ -46,10 +47,18 @@ export const AnswerPanel: React.FC<AnswerPanelProps> = ({
       if (userData) {
         // Send the response to server
         axios
-          .patch("/quiz", {
-            track: track,
-            isCorrect: correctIndex === selectedIndex,
-          })
+          .patch(
+            "/quiz",
+            {
+              track: track,
+              isCorrect: correctIndex === index,
+            },
+            {
+              headers: {
+                authorization: `Bearer ${getCookie("token")}`,
+              },
+            }
+          )
           .then(({ data }) => {
             console.log(data);
           })
@@ -57,7 +66,7 @@ export const AnswerPanel: React.FC<AnswerPanelProps> = ({
             console.log(err);
           });
 
-        const increment = correctIndex === selectedIndex ? 1 : 0;
+        const increment = correctIndex === index ? 1 : 0;
         // Local updates!
         if (track === "basic") {
           const newUserData = update(userData, {
