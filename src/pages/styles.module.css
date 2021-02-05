@@ -41,11 +41,42 @@
 }
 
 .featureDescription {
-  height: 70px;
+  height: 60px;
 }
 
 .logo {
   margin: 10px;
   padding: 0;
   width: 20%;
+}
+
+.feature {
+  margin-bottom: 20px;
+}
+
+.featuresTitle {
+  margin: 30px auto;
+  font-weight: 900;
+}
+
+.crashCourse {
+  background-color: var(--ifm-color-primary);
+  margin: 0;
+  align-items: center;
+  display: flex;
+  height: 410px;
+}
+
+.crashCourseTitle {
+  margin: 30px auto;
+  font-weight: 900;
+  color: black;
+}
+
+.crashCourseImage {
+  width: 200px;
+}
+
+.crashCourseDescription {
+  color: black;
 }

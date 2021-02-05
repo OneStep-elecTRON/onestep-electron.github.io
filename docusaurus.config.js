@@ -1,6 +1,6 @@
 module.exports = {
   title: "One Step",
-  tagline: "Everything ML.",
+  tagline: "Python Programming - Data Science - Machine Learning",
   url: "https://onestep-electron.github.io",
   baseUrl: "/",
   onBrokenLinks: "throw",
@@ -17,9 +17,13 @@ module.exports = {
       },
       items: [
         {
-          to: "docs/",
-          activeBasePath: "docs",
-          label: "Docs",
+          to: "docs/learning-tracks",
+          label: "Learning Tracks",
+          position: "left",
+        },
+        {
+          to: "docs/python-crash-course",
+          label: "Python Crash Course",
           position: "left",
         },
         {
@@ -38,7 +42,7 @@ module.exports = {
       style: "dark",
       links: [
         {
-          title: "Docs",
+          title: "Learn",
           items: [
             {
               label: "Easy Track",
