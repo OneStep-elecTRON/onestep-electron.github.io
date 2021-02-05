@@ -108,6 +108,9 @@ function Home() {
           <section className={styles.features}>
             <div className="container">
               <div className="row">
+                <h1 className={styles.featuresTitle}>LEARNING TRACKS</h1>
+              </div>
+              <div className="row">
                 {features.map((props, idx) => (
                   <Feature key={idx} {...props} />
                 ))}
@@ -115,6 +118,34 @@ function Home() {
             </div>
           </section>
         )}
+        <section className={styles.crashCourse}>
+          <div className="container">
+            <div className="row">
+              <h1 className={styles.crashCourseTitle}>PYTHON CRASH COURSE</h1>
+            </div>
+            <div className="row">
+              <div className={clsx("col col--6")}>
+                <div className="text--center">
+                  <img className={styles.crashCourseImage} src={'img/python-logo.png'} alt='python logo' />
+                </div>
+              </div>
+              <div className={clsx("col col--6")}>
+                <div className="text--center">
+                  <p className={styles.crashCourseDescription}>Descripiton of crash course comes here.</p>
+                  <Link
+                    className={clsx(
+                      "button button--outline button--secondary button--lg",
+                      styles.crashCourseButton
+                    )}
+                    to={useBaseUrl("docs/python-crash-course")}
+                  >
+                    COMING SOON
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
       </main>
     </Layout>
   );

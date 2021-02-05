@@ -1,6 +1,6 @@
 ---
-id: intro
+id: learning-tracks-introduction
 title: Overview Introduction
 sidebar_label: Introduction
-slug: '/'
+slug: /learning-tracks
 ---
