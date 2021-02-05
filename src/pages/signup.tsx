@@ -45,11 +45,7 @@ const SingupPanel = () => {
         setCookie("token", data.data.token);
         // Get userData.
         axios
-          .get("/", {
-            headers: {
-              Authorization: `bearer ${data.data.token}`,
-            },
-          })
+          .get("/")
           .then(({ data }) => {
             setUserData({ ...data.data });
           })

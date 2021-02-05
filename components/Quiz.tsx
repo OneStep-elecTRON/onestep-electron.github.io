@@ -1,9 +1,12 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import axios from "../utils/api";
 import clsx from "clsx";
 import { getCookie } from "../utils/cookie";
 
 import styles from "../src/css/quiz.module.css";
+
+// Global Store
+import { GlobalContext } from "../store/GlobalStateProvider";
 
 export const Quiz: React.FC = ({ children, ...props }) => {
   return (
@@ -24,32 +27,28 @@ export const Question: React.FC = ({ children, ...props }) => {
 interface AnswerPanelProps {
   answers: string[];
   correctIndex: number;
+  track: "basic" | "intermediate" | "advanced";
 }
 
 export const AnswerPanel: React.FC<AnswerPanelProps> = ({
   answers,
   correctIndex,
+  track,
   ...props
 }) => {
   const [selectedIndex, setSelectedIndex] = useState(-1);
-  const [token, setToken] = useState(null);
-
-  useEffect(() => {
-    setToken(getCookie("token"));
-  });
+  const [userData] = useContext(GlobalContext);
 
   const handleOnClick = (index: number) => {
     if (selectedIndex === -1) {
       // Means, if user havent attempted quiz yet
       setSelectedIndex(index);
-
-      if (token) {
+      if (userData) {
         // Send the response to server
         axios
           .patch("/quiz", {
-            headers: {
-              Authorization: `bearer ${token}`,
-            },
+            track: "basic",
+            isCorrect: true,
           })
           .then(({ data }) => {
             console.log(data);

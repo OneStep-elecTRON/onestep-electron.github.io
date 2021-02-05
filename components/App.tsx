@@ -11,11 +11,7 @@ const Auth: React.FC = ({ children }) => {
     const token = getCookie("token");
     if (token) {
       axios
-        .get("/", {
-          headers: {
-            Authorization: `bearer ${token}`,
-          },
-        })
+        .get("/")
         .then(({ data }) => {
           console.log(data);
           setUserData({ ...data.data });
