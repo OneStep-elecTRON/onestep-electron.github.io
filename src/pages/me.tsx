@@ -21,7 +21,7 @@ function Me() {
     if (!userData) {
       history.replace("/login");
     }
-  }, [userData]);
+  }, []);
 
   const handleLogout = () => {
     eraseCookie("token"); // Erases cookie.
