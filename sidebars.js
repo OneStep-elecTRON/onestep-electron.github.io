@@ -4,8 +4,7 @@ module.exports = {
     'PyData Tutorials': ['PyDataTutorials/numpy', 'PyDataTutorials/pandas', 'PyDataTutorials/matplotlib', 'PyDataTutorials/seaborn'],
     'Easy Track': ['EasyTrack/easy-track-intro', 'EasyTrack/linear-regression', 'EasyTrack/logistic-regression', 'EasyTrack/decision-tree', 'EasyTrack/knn','EasyTrack/random-forest', 'EasyTrack/svm', 'EasyTrack/k-means'],
     'Intermediate Track': ['IntermediateTrack/intermediate-track-intro', 'coming-soon'],
-    'Advanced Track': ['AdvancedTrack/advanced-track-intro', 'coming-soon'],
-    'To Be Deleted': ['doc1', 'mdx']
+    'Advanced Track': ['AdvancedTrack/advanced-track-intro', 'coming-soon']
   },
   pythonCrashCourseSidebar: {
     'Introduction': ['python-crash-course-introduction'],
