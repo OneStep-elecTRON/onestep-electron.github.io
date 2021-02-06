@@ -3,6 +3,7 @@ id: k-means
 title: K-Means
 sidebar_label: K-Means
 ---
+import { Quiz, Question, AnswerPanel } from "../../components/Quiz";
 
 K-Means clustering or simply clustering is an unsupervised learning technique. Unlike all the other techniques, which all came under supervised learning techniques, Kmeans is considered as unsupervised as there is no solid ground truth to compare our output with. It can only help us to determine the structure of our data and find smaller groups of data within our main data set. <br/>
 
@@ -38,3 +39,12 @@ With this we come to an end to the theory related to KMeans, you might go on to 
 Learn this section on <a href='https://colab.research.google.com/drive/1zFSwABPi-66YG-BUr7a98SrL2pQndtA_?usp=sharing'>Google Colab.</a>
 
 :::
+
+<Quiz>
+  <Question>Which of the following algorithm is most sensitive to outliers?</Question>
+  <AnswerPanel
+    answers={["K-means clustering algorithm", "K-medians clustering algorithm", "K-modes clustering algorithm", "K-medoids clustering algorithm"]}
+    correctIndex={0}
+    track="basic"
+  />
+</Quiz>
