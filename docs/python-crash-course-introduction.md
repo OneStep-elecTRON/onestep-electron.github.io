@@ -1,6 +1,6 @@
 ---
 id: python-crash-course-introduction
-title: Welcome to Python Crash Course
+title: Introduction
 sidebar_label: Introduction
 slug: /python-crash-course
 ---
