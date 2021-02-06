@@ -4,6 +4,8 @@ title: Random Forest
 sidebar_label: Random Forest
 ---
 
+import { Quiz, Question, AnswerPanel } from "../../components/Quiz";
+
 Now that we know about Decision trees, let's look at another algorithm that uses these decision trees in order to give much better results. Random forest is an **Ensemble** technique which simply means that it is not a single model but a combination of multiple models. In ensembling, we have 2 main techniques: Bagging and Boosting. In Random forest, we use Bagging whereas in algorithms like Adaboost, XGBoost make use of Boosting.<br/>
 
 Let's take a real life example here. Consider you have a data set with features of people and you need to classify whether the person is male or female. Random forest is mostly used for classification purpose but you can use it for regression tasks as well. The very first step in bagging is splitting the main data set into smaller sets to feed to different models. So we split our data set of features and feed it to differnt models, which in our case are the Decision trees. These features can be anything such as the length of hair, facial features, etc. After giving few records to our first model, we perform resampling before giving records to the next model. This step is called Row sampling with replacement.This steps is also known as **Bootstrapping**. Each models trains on their sample of data i.e the features of the person and when we give it the test data, the model makes a prediction or gives an output.<br/>
@@ -31,3 +33,12 @@ This sums up our Random Forest algorithm. Please go through the notebooks and qu
 Learn this section on <a href='https://colab.research.google.com/drive/1qYanhuNI6e9-ohaNSf2G28Z34AljRyuT?usp=sharing'>Google Colab.</a>
 
 :::
+
+ <Quiz>
+  <Question>Random Forests is based upon?</Question>
+  <AnswerPanel
+    answers={["Decision Tree", "Logistic Regression", "Linear Regression", "SVM"]}
+    correctIndex={0}
+    track="basic"
+  />
+</Quiz>
