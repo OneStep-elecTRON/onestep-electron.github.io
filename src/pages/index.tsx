@@ -135,7 +135,7 @@ function Home() {
                     )}
                     to={useBaseUrl("docs/python-crash-course")}
                   >
-                    COMING SOON
+                    GET STARTED
                   </Link>
                 </div>
               </div>
