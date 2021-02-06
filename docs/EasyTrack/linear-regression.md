@@ -3,6 +3,7 @@ id: linear-regression
 title: Linear Regression
 sidebar_label: Linear Regression
 ---
+import { Quiz, Question, AnswerPanel } from "../../components/Quiz";
 
 Linear Regression is the most famous machine learning algorithm and its a statistical method to carry out redictive analysis. But before we jump into understanding Linear regression, lets understand what's regression. <br/>
 
@@ -33,3 +34,12 @@ Learn Linear Regression on <a href='https://colab.research.google.com/drive/1FVm
 Learn Polynomial Regression on <a href='https://colab.research.google.com/drive/13zr9sEBkasJVB8fnAuePUosUv-qlU8sy?usp=sharing'>Google Colab.</a>
 
 :::
+
+ <Quiz>
+  <Question>Which of the following is true about Residuals ?</Question>
+  <AnswerPanel
+    answers={["Lower is better", "Higher is better", "A or B depend on the situation", "None of these"]}
+    correctIndex={0}
+    track="basic"
+  />
+</Quiz>
