@@ -38,7 +38,7 @@ function Me() {
     >
       <main className="container">
         {userData && (
-          <div>
+          <div className={styles.page}>
             <header className={styles.header}>
               <h1>
                 Welcome back,{" "}
@@ -54,12 +54,11 @@ function Me() {
                 </div>
               </div>
             </header>
-
             <div className={styles.sections}>
               <section className={styles.section}>
                 {/* title */}
                 <h1>Here's how you're doing in the ML tracks.</h1>
-                <div className="container">
+                <div>
                   {/* row of cards */}
                   <div className="row">
                     {/* card 1 */}
@@ -67,15 +66,12 @@ function Me() {
                       <div className="text--center">
                         <div className={styles.card}>
                           <div className={styles.title}>Basic</div>
-                          <div>
-                            <div>
-                              Progress: {userData.track.basic.progress}%
-                            </div>
-                            <div>
-                              Quizzes Solved:{" "}
-                              {userData.track.basic.quizScore | 0}/
-                              {userData.track.basic.totalQuizAnswered | 0}
-                            </div>
+                          <div className={styles.progress}>
+                            Progress: {userData.track.basic.progress}%
+                          </div>
+                          <div className={styles.progress}>
+                            Quizzes Solved: {userData.track.basic.quizScore | 0}
+                            /{userData.track.basic.totalQuizAnswered | 0}
                           </div>
                         </div>
                       </div>
@@ -86,15 +82,14 @@ function Me() {
                       <div className="text--center">
                         <div className={styles.card}>
                           <div className={styles.title}>Intermediate</div>
-                          <div>
-                            <div>
-                              Progress: {userData.track.intermediate.progress}%
-                            </div>
-                            <div>
-                              Quizzes Solved:{" "}
-                              {userData.track.intermediate.quizScore}/
-                              {userData.track.intermediate.totalQuizAnswered}
-                            </div>
+
+                          <div className={styles.progress}>
+                            Progress: {userData.track.intermediate.progress}%
+                          </div>
+                          <div className={styles.progress}>
+                            Quizzes Solved:{" "}
+                            {userData.track.intermediate.quizScore}/
+                            {userData.track.intermediate.totalQuizAnswered}
                           </div>
                         </div>
                       </div>
@@ -105,15 +100,13 @@ function Me() {
                       <div className="text--center">
                         <div className={styles.card}>
                           <div className={styles.title}>Advanced</div>
-                          <div>
-                            <div>
-                              Progress: {userData.track.advanced.progress}%
-                            </div>
-                            <div>
-                              Quizzes Solved:{" "}
-                              {userData.track.advanced.quizScore}/
-                              {userData.track.advanced.totalQuizAnswered}
-                            </div>
+
+                          <div className={styles.progress}>
+                            Progress: {userData.track.advanced.progress}%
+                          </div>
+                          <div className={styles.progress}>
+                            Quizzes Solved: {userData.track.advanced.quizScore}/
+                            {userData.track.advanced.totalQuizAnswered}
                           </div>
                         </div>
                       </div>
@@ -124,16 +117,16 @@ function Me() {
               <section className={styles.section}>
                 {/* title */}
                 <h1>Here's how you're doing in the Python Crash Course.</h1>
-                <div className="container">
+                <div>
                   {/* row of cards */}
                   <div className="row">
                     {/* card 1 */}
                     <div className={clsx("col col--12")}>
                       <div className="text--center">
                         <div className={styles.card}>
-                          <div>
-                            <div>Progress: 0%</div>
-                            <div>Quizzes Solved: 0/0</div>
+                          <div className={styles.progress}>Progress: 0%</div>
+                          <div className={styles.progress}>
+                            Quizzes Solved: 0/0
                           </div>
                         </div>
                       </div>
