@@ -32,3 +32,13 @@ With this we come to an end to the Decision Trees theory and we can go on to the
 Learn this section on <a href='https://colab.research.google.com/drive/1qYanhuNI6e9-ohaNSf2G28Z34AljRyuT?usp=sharing'>Google Colab.</a>
 
 :::
+
+import { Quiz, Question, AnswerPanel } from "../components/Quiz";
+<Quiz>
+  <Question>Entropy values fall between?</Question>
+  <AnswerPanel
+    answers={["0 and 1", "-1 and 1", "More than 1", "None of these"]}
+    correctIndex={0}
+    track="basic"
+  />
+</Quiz>
