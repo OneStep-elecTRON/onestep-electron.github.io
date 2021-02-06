@@ -68,24 +68,23 @@ const SingupPanel = () => {
   };
 
   return (
-    <main className={styles.main}>
+    <main>
       {loading ? (
         <div>Loading...</div>
       ) : (
-        <>
-          <h1 className={styles.headerMessage}>Register now to save and track your progress. It's free, now and forever.</h1>
-          <form onSubmit={handleSubmit(onSubmit)} className={"form " + styles.signupForm}>
+        <div className={styles.main}>
+          <h1 className={styles.header}>
+            Register now to save and track your progress. It's free, now and
+            forever.
+          </h1>
+          <form className={styles.form}>
             <div className={"text " + styles.errorMessage}>
               {(errors.email && errors.email.message) ||
                 (errors.password && errors.password.message)}
             </div>
             <div>
               <div className="text">Username</div>
-              <input
-                name="username"
-                ref={register}
-                className={"input " + styles.inputBox}
-              />
+              <input name="username" ref={register} className={styles.input} />
             </div>
             <div>
               <div className="text">Email</div>
@@ -99,7 +98,7 @@ const SingupPanel = () => {
                     message: "Invalid email address.",
                   },
                 })}
-                className={"input " + styles.inputBox}
+                className={styles.input}
               />
             </div>
             <div>
@@ -118,22 +117,19 @@ const SingupPanel = () => {
                     message: "Password should be at least 5 characters long.",
                   },
                 })}
-                className={"input " + styles.inputBox}
+                className={styles.input}
               />
             </div>
             <div>
-              <button
-                type="submit"
-                className={"input button " + styles.signupButton}
-              >
+              <div onClick={handleSubmit(onSubmit)} className={styles.signup}>
                 Sign Up
-              </button>
+              </div>
             </div>
             <Link to="/login" className="text">
               Already have an account?
             </Link>
           </form>
-        </>
+        </div>
       )}
     </main>
   );

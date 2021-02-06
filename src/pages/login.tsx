@@ -71,15 +71,13 @@ const LoginPanel = () => {
   };
 
   return (
-    <main className={styles.main}>
+    <main>
       {loading ? (
         <div>Loading...</div>
       ) : (
-        <>
-          <h1 className={styles.headerMessage}>
-            Pick up right where you left off.
-          </h1>
-          <form onSubmit={handleSubmit(onSubmit)} className={"form " + styles.loginForm}>
+        <div className={styles.main}>
+          <h1 className={styles.header}>Pick up right where you left off.</h1>
+          <form className={styles.form}>
             <div className={"text " + styles.errorMessage}>
               {(errors.email && errors.email.message) ||
                 (errors.password && errors.password.message)}
@@ -96,7 +94,7 @@ const LoginPanel = () => {
                     message: "Invalid email address.",
                   },
                 })}
-                className={"input " + styles.inputBox}
+                className={styles.input}
               />
             </div>
             <div>
@@ -107,22 +105,19 @@ const LoginPanel = () => {
                 ref={register({
                   required: { value: true, message: "Password required." },
                 })}
-                className={"input " + styles.inputBox}
+                className={styles.input}
               />
             </div>
             <div>
-              <button
-                type="submit"
-                className={"input button " + styles.loginButton}
-              >
+              <div onClick={handleSubmit(onSubmit)} className={styles.login}>
                 Log In
-              </button>
+              </div>
             </div>
             <Link to="/signup" className="text">
               Don't have an account?
             </Link>
           </form>
-        </>
+        </div>
       )}
     </main>
   );
