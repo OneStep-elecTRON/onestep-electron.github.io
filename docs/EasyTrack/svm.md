@@ -4,6 +4,8 @@ title: Support Vector Machine (SVM)
 sidebar_label: Support Vector Machine (SVM)
 ---
 
+import { Quiz, Question, AnswerPanel } from "../../components/Quiz";
+
 Support Vector Machine or SVM is one of the best algorithms when it comes to classification type problems and is very famous among ML Practitioners. In this section we will try and understand how it exactly works. Let's try and understand the whole working with a simple example. Let's say you are watching the republic day parade and there are people standing at both ends of the road. These people are guarded by Police on both the ends and in between, the army is marching. On the right side of the road we have all females and on the left side of the road we have all males.
 
 <p align="center">
@@ -36,3 +38,12 @@ With this we come to an end to the SVM section and we can go on to the notebooks
 Learn this section on <a href='https://colab.research.google.com/drive/1BQ5BaPS2BEWZ0vP7yYpueoz0IZQw5-XS?usp=sharing'>Google Colab.</a>
 
 :::
+
+ <Quiz>
+  <Question>Drawbacks of SVM?</Question>
+  <AnswerPanel
+    answers={["More Training Time", "Logistic Regression", "Linear Regression", "SVM"]}
+    correctIndex={0}
+    track="basic"
+  />
+</Quiz>
