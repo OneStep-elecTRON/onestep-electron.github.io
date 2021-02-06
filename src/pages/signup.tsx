@@ -73,7 +73,7 @@ const SingupPanel = () => {
         <div>Loading...</div>
       ) : (
         <>
-          <h1 className={styles.headerMessage}>Register now for free.</h1>
+          <h1 className={styles.headerMessage}>Register now to save and track your progress. It's free, now and forever.</h1>
           <form onSubmit={handleSubmit(onSubmit)} className={"form " + styles.signupForm}>
             <div className={"text " + styles.errorMessage}>
               {(errors.email && errors.email.message) ||
