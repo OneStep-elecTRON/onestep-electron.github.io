@@ -13,7 +13,7 @@ const features = [
   {
     title: "Easy Track",
     imageUrl: "img/one-tier-pyramid.png",
-    description: <>Decision Tree, K-Means, Random Forest, SVM, KNN.</>,
+    description: <>Linear Regression, Logistic Regression, Decision Tree, KNN, Random Forest, SVM, K-Means.</>,
     baseUrl: "docs/EasyTrack/",
   },
   {
@@ -126,7 +126,7 @@ function Home() {
               <div className={clsx("col col--6")}>
                 <div className="text--center">
                   <p className={styles.crashCourseDescription}>
-                    Descripiton of crash course comes here.
+                    The Python Crash Course is built by us to help you understand all the necessary python concepts and syntax in order to get started with your journey in ML and Data Science. We have covered everything in 3 Jupyter notebooks which ranges from simple data types and loops to concepts like OOP.
                   </p>
                   <Link
                     className={clsx(
