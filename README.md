@@ -1,4 +1,4 @@
-# onestep-electron client-side
+# OneStep-elecTRON Client-Side
 
 [OneStep-elecTRON](https://github.com/OneStep-elecTRON/onestep-electron.github.io) is a free and open-source python and machine learning learning platform for everyone.
 
