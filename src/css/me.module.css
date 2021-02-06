@@ -1,21 +1,39 @@
 .header {
-  text-align: center;
-  margin: 30px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 5rem 0rem;
 }
 
-.username {
+.colored {
   color: var(--ifm-color-primary);
 }
 
-.logoutButton {
-  font-size: medium;
-  padding: 10px;
-  border: none;
-  border-radius: 7px;
-  width: 100%;
-  margin-top: 20px;
+.email {
+  display: flex;
+  font-size: 17px;
+  font-weight: 600;
+  gap: 5px;
+}
+
+.setting {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logout {
+  font-size: 14px;
+  padding: 5px 10px;
+  border-radius: 3px;
+  font-weight: 600;
+  cursor: pointer;
+  border: 1px solid #dedede;
+}
+
+.logout:hover {
+  background-color: var(--ifm-color-primary);
   color: white;
-  border: 1px solid var(--ifm-color-primary);
 }
 
 .logoutButton:hover {
@@ -38,7 +56,7 @@
 
 .card:hover {
   background-color: var(--ifm-color-primary);
-  color: white
+  color: white;
 }
 
 .title {

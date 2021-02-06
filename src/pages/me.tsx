@@ -42,16 +42,16 @@ function Me() {
             <header className={styles.header}>
               <h1>
                 Welcome back,{" "}
-                <span className={styles.username}>{userData.username}!</span>
+                <span className={styles.colored}>{userData.username}!</span>
               </h1>
-              <h4>Your Email ID: {userData.email}</h4>
-              <div>
-                <button
-                  className={"button " + styles.logoutButton}
-                  onClick={handleLogout}
-                >
+              <div className={styles.setting}>
+                <div className={styles.email}>
+                  Your Email:{" "}
+                  <div className={styles.colored}>{userData.email}</div>
+                </div>
+                <div className={styles.logout} onClick={handleLogout}>
                   Logout
-                </button>
+                </div>
               </div>
             </header>
 
