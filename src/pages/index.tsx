@@ -75,7 +75,7 @@ const GetStartedButton = () => {
           "button button--outline button--secondary button--lg",
           styles.login
         )}
-        to={useBaseUrl(userData ? "docs/learning-tracks" : "login")}
+        to={useBaseUrl(userData ? "docs/machine-learning-tracks" : "login")}
       >
         {userData ? "Keep Learning" : "Log In"}
       </Link>
