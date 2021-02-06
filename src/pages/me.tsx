@@ -121,9 +121,6 @@ function Me() {
                   </div>
                 </div>
               </section>
-
-              <hr />
-
               <section className={styles.section}>
                 {/* title */}
                 <h1>Here's how you're doing in the Python Crash Course.</h1>

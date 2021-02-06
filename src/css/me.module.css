@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 5rem 0rem;
+  margin-top: 5rem;
 }
 
 .colored {
@@ -42,8 +42,12 @@
 }
 
 .section {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
   text-align: center;
-  margin: 30px auto;
+  padding: 4rem 0rem;
+  border-bottom: 1px solid #dedede;
 }
 
 .card {
@@ -51,7 +55,7 @@
   padding: 20px;
   border: 1px solid #dedede;
   border-radius: 10px;
-  margin: 20px;
+  cursor: pointer;
 }
 
 .card:hover {
