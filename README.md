@@ -1,6 +1,12 @@
-# OneStep-elecTRON Client-Side
+# OneStepML - Client-Side
+---
+[![Open Source Love svg1](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badges/)    ![Made with love at elecTRON](https://img.shields.io/badge/Made%20with%20%E2%99%A5%20at-elecTRON-red)   [![Maintenance](https://img.shields.io/badge/MAINTAINED%3F-YES-green.svg)](https://GitHub.com/Naereen/StrapDown.js/graphs/commit-activity)    [![Website shields.io](https://img.shields.io/website-up-down-green-red/http/shields.io.svg)](http://shields.io/) 
 
-[OneStep-elecTRON](https://onestep-electron.github.io) is a free and open-source machine learning and python, a learning platform for everyone.
+Welcome to OneStepML. 
+> "The one-step, open-source destination for all things ML."</br>
+> "A FREE platform for student developers, made by the student developers..."
+
+OneStepML is a community-led, open-sourced, e-learning platform for Machine Learning and Data Science, developed with :heart: at elecTRON. 
 
 Server-side: [Here](https://github.com/OneStep-elecTRON/onestep-electron-server)
 
@@ -8,12 +14,12 @@ Content: [Here](https://github.com/OneStep-elecTRON/onestep-electron-content)
 
 ## 🧐 Why OneStep-elecTRON?
 
-- **Machine Learning Tracks** Learn machine learning from basic to advanced with hand-crafted and trusted content.
-- **Phython Learning Tracks** New to machine learning? Start by getting familiar with **Python**.
-- **Sync Progress with Authetication** Register to keep track of your progress and quizes you have solved.
-- **Live Code Execution** Execute you python code right away with live code editor integration.
-- **Interactive Quizzes**. Track your learning with interactive quiz, and get your anwsers right away.
-- **Run on Colab Integration**. Run your machine learning stuff on colab.
+- [x] **Machine Learning Tracks**: Learn machine learning from basics to advanced with hand-crafted and trusted content.
+- [x] **Phython Learning Tracks**: New to machine learning? Start by getting familiar with **Python**.
+- [x] **Sync Progress with Authetication**: Register to keep track of your progress and quizes you have solved. Students can learn without logging in too.
+- [x] **Live Code Execution**: Execute you Python code right away with an integrated code editor.
+- [x] **Interactive Quizzes**: Track your learning with interactive quiz, and get your anwsers right away.
+- [x] **Run on Colab Integration**: Practice and learn via hands-on exercises in Google Colab.
 
 ## 🎉 Requiremenets
 
