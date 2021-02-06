@@ -3,6 +3,7 @@ id: knn
 title: K-Nearest Neighbors (KNN)
 sidebar_label: K-Nearest Neighbors (KNN)
 ---
+import { Quiz, Question, AnswerPanel } from "../../components/Quiz";
 
 We have seen many Classification algorithms so far and now it is time for us to explore KNN. K-Nearest neighnors or KNN is a supervised learning technique which can be used for both classification and regression type problems. But mostly, KNNs are used for classification. Compared to others, KNN is very simple to understand and implement. Let's try to understand it with help of some examples and diagrams.<br/>
 
@@ -28,3 +29,12 @@ With KNN done, you can move onto the Notebooks and then implement whatever you h
 Learn this section on <a href='https://colab.research.google.com/drive/1yxRhrs3VZ2hkn-hLqMbX2b6XhFZs1jyu?usp=sharing'>Google Colab.</a>
 
 :::
+
+ <Quiz>
+  <Question>While finding the optimal K value, we make use of?</Question>
+  <AnswerPanel
+    answers={["Error Rate", "Accuracy", "Both", "None of these"]}
+    correctIndex={2}
+    track="basic"
+  />
+</Quiz>
