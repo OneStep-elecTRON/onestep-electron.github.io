@@ -2,10 +2,11 @@
   padding: 0rem 5rem;
 }
 
-.header {
+.header_custom {
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
   margin-top: 5rem;
 }
 
@@ -40,13 +41,16 @@
   color: white;
 }
 
+.sections > .section:nth-last-child(2) {
+  border-bottom: 1px solid #dedede;
+}
+
 .section {
   display: flex;
   flex-direction: column;
   gap: 2rem;
   text-align: center;
   padding: 4rem 0rem;
-  border-bottom: 1px solid #dedede;
 }
 
 .card {
@@ -64,6 +68,7 @@
 
 .card:hover {
   border-color: var(--ifm-color-primary);
+  box-shadow: 0px 0px 5px 0px var(--ifm-color-primary);
 }
 
 .title {
@@ -72,9 +77,7 @@
 }
 
 .progress {
-  border: 1px solid #ececec;
-  border-radius: 5px;
-  padding: 5px 10px;
+  padding: 2px 0px;
   width: 100%;
   display: flex;
 }

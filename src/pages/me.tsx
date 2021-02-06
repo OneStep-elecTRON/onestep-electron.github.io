@@ -39,7 +39,7 @@ function Me() {
       <main className="container">
         {userData && (
           <div className={styles.page}>
-            <header className={styles.header}>
+            <header className={styles.header_custom}>
               <h1>
                 Welcome back,{" "}
                 <span className={styles.colored}>{userData.username}!</span>

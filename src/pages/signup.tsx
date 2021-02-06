@@ -10,7 +10,6 @@ import { SubmitHandler, useForm } from "react-hook-form";
 import axios from "../../utils/api";
 import { setCookie } from "../../utils/cookie";
 
-import "../css/components.css";
 import styles from "../css/signup.module.css";
 import { GlobalContext } from "../../store/GlobalStateProvider";
 
