@@ -7,7 +7,7 @@ module.exports = {
     'Advanced Track': ['AdvancedTrack/advanced-track-intro']
   },
   pythonCrashCourseSidebar: {
-    'Introduction': ['python-crash-course-introduction'],
+    'Introduction': ['python-crash-course-introduction' 'PythonCrashCourse/ide.md'],
     'Part 1': ['PythonCrashCourse/part1'],
     'Part 2': ['PythonCrashCourse/part2'],
     'Part 3': ['PythonCrashCourse/part3']
