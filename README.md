@@ -1,6 +1,8 @@
+# Click [here](https://onestep-electron.github.io/) to view the live website.
+[![Open Source Love svg1](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badges/)    ![Made with love at elecTRON](https://img.shields.io/badge/Made%20with%20%E2%99%A5%20at-elecTRON-red)   [![Maintenance](https://img.shields.io/badge/MAINTAINED%3F-YES-green.svg)](https://GitHub.com/Naereen/StrapDown.js/graphs/commit-activity)    [![Website shields.io](https://img.shields.io/website-up-down-green-red/http/shields.io.svg)](http://shields.io/) 
+
 # OneStepML - Client-Side
 ---
-[![Open Source Love svg1](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badges/)    ![Made with love at elecTRON](https://img.shields.io/badge/Made%20with%20%E2%99%A5%20at-elecTRON-red)   [![Maintenance](https://img.shields.io/badge/MAINTAINED%3F-YES-green.svg)](https://GitHub.com/Naereen/StrapDown.js/graphs/commit-activity)    [![Website shields.io](https://img.shields.io/website-up-down-green-red/http/shields.io.svg)](http://shields.io/) 
 
 Welcome to OneStepML. 
 > "The one-step, open-source destination for all things ML."</br>
