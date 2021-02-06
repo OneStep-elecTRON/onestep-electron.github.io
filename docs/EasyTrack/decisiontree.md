@@ -7,7 +7,7 @@ sidebar_label: Decision Tree
 When we talk about classification type problem statement, one of the most common algorithm that people tend to go with is Decision tree. Let's try to understand Decision tree and how does it work exactly. This algorithm can be used for both classification and regression but in most cases it is used for classification. In decision tree we split our data into different nodes in the tree. For the splitting purpose we use something known as **Entropy** that helps us in selecting the right features to split our data inorder to make our decision tree. Entropy helps us to determine the purity of a split. A pure subsplit means we either get a value of 0 or 1(Yes or No). The goal in Decision tree is to get to the leaf node as quickly as possible. For this purpose we need to select the right features and parameters. Whenever we perform a split, we need to calculate the purity of the split and this is where we use Entropy. Let's say we need to classify whether a car will be sold or not given it's different properties and features. Let's see how we can calculate the entropy and determine the split for the above case.<br/>
 
 <p align="center">
-<img src="https://raw.githubusercontent.com/OneStep-elecTROyN/ContentSection/main/Courses/eas_track/Decision%20Trees/DecisionTree-1.png" alt="drawing" width="700"/>
+<img src="https://raw.githubusercontent.com/OneStep-elecTRON/ContentSection/main/Courses/easy_track/Decision%20Trees/DecisionTree-1.png" alt="drawing" width="700"/>
 </p>
 
 
