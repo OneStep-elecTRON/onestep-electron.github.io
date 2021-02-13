@@ -2,6 +2,7 @@
 id: part1
 title: Part 1
 sidebar_label: Colab
+custom_edit_url: https://github.com/OneStep-elecTRON/onestep-electron-content
 ---
 
 :::tip

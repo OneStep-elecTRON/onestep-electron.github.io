@@ -2,6 +2,7 @@
 id: svm
 title: Support Vector Machine (SVM)
 sidebar_label: Support Vector Machine (SVM)
+custom_edit_url: https://github.com/OneStep-elecTRON/onestep-electron-content
 ---
 
 import { Quiz, Question, AnswerPanel } from "../../components/Quiz";

@@ -2,6 +2,7 @@
 id: logistic-regression
 title: Logistic Regression
 sidebar_label: Logistic Regression
+custom_edit_url: https://github.com/OneStep-elecTRON/onestep-electron-content
 ---
 
 import { Quiz, Question, AnswerPanel } from "../../components/Quiz";

@@ -2,6 +2,7 @@
 id: decision-tree
 title: Decision Tree
 sidebar_label: Decision Tree
+custom_edit_url: https://github.com/OneStep-elecTRON/onestep-electron-content
 ---
 
 import { Quiz, Question, AnswerPanel } from "../../components/Quiz";
