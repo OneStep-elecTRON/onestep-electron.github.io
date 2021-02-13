@@ -2,6 +2,7 @@
 id: random-forest
 title: Random Forest
 sidebar_label: Random Forest
+custom_edit_url: https://github.com/OneStep-elecTRON/onestep-electron-content
 ---
 
 import { Quiz, Question, AnswerPanel } from "../../components/Quiz";

@@ -114,26 +114,6 @@ function Me() {
                   </div>
                 </div>
               </section>
-              <section className={styles.section}>
-                {/* title */}
-                <h1>Here's how you're doing in the Python Crash Course.</h1>
-                <div>
-                  {/* row of cards */}
-                  <div className="row">
-                    {/* card 1 */}
-                    <div className={clsx("col col--12")}>
-                      <div className="text--center">
-                        <div className={styles.card}>
-                          <div className={styles.progress}>Progress: 0%</div>
-                          <div className={styles.progress}>
-                            Quizzes Solved: 0/0
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </section>
             </div>
           </div>
         )}

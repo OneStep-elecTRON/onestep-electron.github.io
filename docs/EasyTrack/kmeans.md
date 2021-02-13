@@ -2,6 +2,7 @@
 id: k-means
 title: K-Means
 sidebar_label: K-Means
+custom_edit_url: https://github.com/OneStep-elecTRON/onestep-electron-content
 ---
 import { Quiz, Question, AnswerPanel } from "../../components/Quiz";
 
