@@ -66,49 +66,41 @@ export const AnswerPanel: React.FC<AnswerPanelProps> = ({
             console.log(err);
           });
 
+        axios
+          .patch(
+            "/progress",
+            {
+              track: track,
+              count: userData.track[track].progress,
+            },
+            {
+              headers: {
+                authorization: `Bearer ${getCookie("token")}`,
+              },
+            }
+          )
+          .then(({ data }) => {
+            console.log(data);
+          })
+          .catch((err) => {
+            console.log(err);
+          });
+
         const increment = correctIndex === index ? 1 : 0;
-        // Local updates!
-        if (track === "basic") {
-          const newUserData = update(userData, {
-            track: {
-              basic: {
-                quizScore: { $set: userData.track.basic.quizScore + increment },
-                totalQuizAnswered: {
-                  $set: userData.track.basic.totalQuizAnswered + 1,
-                },
+
+        // Local Updates
+        const newUserData = update(userData, {
+          track: {
+            [track]: {
+              quizScore: { $set: userData.track[track].quizScore + increment },
+              totalQuizAnswered: {
+                $set: userData.track[track].totalQuizAnswered + 1,
               },
+              progress: { $set: userData.track[track].progress + 20 },
             },
-          });
-          setUserData(newUserData);
-        } else if (track === "intermediate") {
-          const newUserData = update(userData, {
-            track: {
-              intermediate: {
-                quizScore: {
-                  $set: userData.track.intermediate.quizScore + increment,
-                },
-                totalQuizAnswered: {
-                  $set: userData.track.intermediate.totalQuizAnswered + 1,
-                },
-              },
-            },
-          });
-          setUserData(newUserData);
-        } else if (track === "advanced") {
-          const newUserData = update(userData, {
-            track: {
-              advanced: {
-                quizScore: {
-                  $set: userData.track.advanced.quizScore + increment,
-                },
-                totalQuizAnswered: {
-                  $set: userData.track.advanced.totalQuizAnswered + 1,
-                },
-              },
-            },
-          });
-          setUserData(newUserData);
-        }
+          },
+        });
+        setUserData(newUserData);
       }
     }
   };
