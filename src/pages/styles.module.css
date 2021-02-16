@@ -27,6 +27,7 @@
 .features {
   display: flex;
   align-items: center;
+  justify-content: center;
   padding: 2rem 0;
   width: 100%;
 }
@@ -57,14 +58,16 @@
 .featuresTitle {
   margin: 30px auto;
   font-weight: 900;
+  text-align: center;
+  display: flex;
 }
 
 .crashCourse {
   background-color: var(--ifm-color-primary);
   margin: 0;
+  padding: 20px;
   align-items: center;
   display: flex;
-  height: 450px;
 }
 
 .crashCourseTitle {
