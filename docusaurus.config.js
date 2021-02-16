@@ -79,6 +79,7 @@ module.exports = {
       ],
       copyright: `Copyright © ${new Date().getFullYear()} One Step, Inc. Built with Docusaurus.`,
     },
+    metadatas: [{name: 'description', content: 'A community-led, open-sourced, e-learning platform for Machine Learning and Data Science, developed with ❤️ at elecTRON.'}]
   },
   presets: [
     [
