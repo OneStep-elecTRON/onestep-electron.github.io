@@ -74,6 +74,8 @@
   margin: 30px auto;
   font-weight: 900;
   color: black;
+  text-align: center;
+  display: flex;
 }
 
 .crashCourseImage {
