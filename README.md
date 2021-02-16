@@ -10,9 +10,9 @@ Welcome to OneStepML.
 
 OneStepML is a community-led, open-sourced, e-learning platform for Machine Learning and Data Science, developed with :heart: at elecTRON. 
 
-Server-side: [Here](https://github.com/OneStep-elecTRON/onestep-electron-server)
+OneStep Server: [Here](https://github.com/OneStep-elecTRON/onestep-electron-server)
 
-Content: [Here](https://github.com/OneStep-elecTRON/onestep-electron-content)
+OneStep Content: [Here](https://github.com/OneStep-elecTRON/onestep-electron-content)
 
 ## 🧐 Why OneStep-elecTRON?
 ---
