@@ -1,5 +1,6 @@
 # Click [here](https://onestep-electron.github.io/) to view the live website.
 [![Open Source Love svg1](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badges/)    ![Made with love at elecTRON](https://img.shields.io/badge/Made%20with%20%E2%99%A5%20at-elecTRON-red)   [![Maintenance](https://img.shields.io/badge/MAINTAINED%3F-YES-green.svg)](https://GitHub.com/Naereen/StrapDown.js/graphs/commit-activity)    [![Website shields.io](https://img.shields.io/website-up-down-green-red/http/shields.io.svg)](http://shields.io/) 
+[![Discord](https://img.shields.io/discord/591914197219016707.svg?label=&logo=discord&logoColor=ffffff&color=7389D8&labelColor=6A7EC2)](https://discord.gg/vpEv3HJ)
 
 # OneStepML - Client-Side
 ---
@@ -25,6 +26,12 @@ OneStep Content Repo : [Here](https://github.com/OneStep-elecTRON/onestep-electr
 - [x] **Live Code Execution**: Execute you Python code right away inside an integrated code editor. You don't need powerful PCs to learn ML!
 - [x] **Interactive Quizzes**: Track your learning with interactive quizzes, and get your answers right away.
 - [x] **Run on Colab Integration**: Practice and learn via hands-on exercises/tutorials in Google Colab Notebooks.
+
+## 🔴 Be Part of Our Community
+---
+
+Join our Discord and be part of OneStep community. Feel free to interact with other community members and also get your doubts cleared regarding anything OneStep related. <br/>
+Link to the server - https://discord.com/invite/cwxfhByeBf
 
 ## 🎉 Requiremenets
 ---
