@@ -129,7 +129,7 @@ function Login() {
   return (
     <Layout
       title={`Hello from ${siteConfig.title}`}
-      description="Description will go into a meta tag in <head />"
+      description="A community-led, open-sourced, e-learning platform for Machine Learning and Data Science, developed with ❤️ at elecTRON."
     >
       <LoginPanel />
     </Layout>

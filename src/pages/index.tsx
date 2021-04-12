@@ -13,7 +13,12 @@ const features = [
   {
     title: "Easy Track",
     imageUrl: "img/one-tier-pyramid.png",
-    description: <>Linear Regression, Logistic Regression, Decision Tree, KNN, Random Forest, SVM, K-Means.</>,
+    description: (
+      <>
+        Linear Regression, Logistic Regression, Decision Tree, KNN, Random
+        Forest, SVM, K-Means.
+      </>
+    ),
     baseUrl: "docs/EasyTrack/",
   },
   {
@@ -79,7 +84,7 @@ function Home() {
   return (
     <Layout
       title={siteConfig.title}
-      description="Description will go into a meta tag in <head />"
+      description="A community-led, open-sourced, e-learning platform for Machine Learning and Data Science, developed with ❤️ at elecTRON."
     >
       <header className={clsx("hero hero--primary", styles.heroBanner)}>
         <div className="container">
@@ -98,7 +103,9 @@ function Home() {
           <section className={styles.features}>
             <div className="container">
               <div className="row">
-                <h1 className={styles.featuresTitle}>MACHINE LEARNING TRACKS</h1>
+                <h1 className={styles.featuresTitle}>
+                  MACHINE LEARNING TRACKS
+                </h1>
               </div>
               <div className="row">
                 {features.map((props, idx) => (
@@ -126,7 +133,12 @@ function Home() {
               <div className={clsx("col col--6")}>
                 <div className="text--center">
                   <p className={styles.crashCourseDescription}>
-                    The Python Crash Course is built by us to help you understand all the necessary python concepts and syntax in order to get started with your journey in ML and Data Science. We have covered everything in 3 Jupyter notebooks which ranges from simple data types and loops to concepts like OOP.
+                    The Python Crash Course is built by us to help you
+                    understand all the necessary python concepts and syntax in
+                    order to get started with your journey in ML and Data
+                    Science. We have covered everything in 3 Jupyter notebooks
+                    which ranges from simple data types and loops to concepts
+                    like OOP.
                   </p>
                   <Link
                     className={clsx(
