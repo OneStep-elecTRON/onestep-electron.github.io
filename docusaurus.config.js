@@ -27,7 +27,8 @@ module.exports = {
           position: "left",
         },
         {
-          href: "https://github.com/OneStep-elecTRON/onestep-electron.github.io",
+          href:
+            "https://github.com/OneStep-elecTRON/onestep-electron.github.io",
           label: "GitHub",
           position: "right",
         },
@@ -55,7 +56,7 @@ module.exports = {
             {
               label: "Advanced Track",
               to: "docs/AdvancedTrack/",
-            }
+            },
           ],
         },
         {
@@ -72,7 +73,8 @@ module.exports = {
           items: [
             {
               label: "Coming Soon",
-              href: "https://github.com/OneStep-elecTRON/onestep-electron.github.io",
+              href:
+                "https://github.com/OneStep-elecTRON/onestep-electron.github.io",
             },
           ],
         },
@@ -80,8 +82,26 @@ module.exports = {
       copyright: `Copyright © ${new Date().getFullYear()} One Step, Inc. Built with Docusaurus.`,
     },
     metadatas: [
-      {name: 'description', content: 'A community-led, open-sourced, e-learning platform for Machine Learning and Data Science, developed with ❤️ at elecTRON.'},
-      {name: 'og:description', content: 'A community-led, open-sourced, e-learning platform for Machine Learning and Data Science, developed with ❤️ at elecTRON.'}    ]
+      {
+        name: "description",
+        content:
+          "A community-led, open-sourced, e-learning platform for Machine Learning and Data Science, developed with ❤️ at elecTRON.",
+      },
+      {
+        name: "og:description",
+        content:
+          "A community-led, open-sourced, e-learning platform for Machine Learning and Data Science, developed with ❤️ at elecTRON.",
+      },
+      {
+        name: "og:title",
+        content: "OneStep - ML",
+      },
+      {
+        name: "og:site_name",
+        content:
+          "A community-led, open-sourced, e-learning platform for Machine Learning and Data Science, developed with ❤️ at elecTRON.",
+      },
+    ],
   },
   presets: [
     [
@@ -90,7 +110,8 @@ module.exports = {
         docs: {
           sidebarPath: require.resolve("./sidebars.js"),
           // Please change this to your repo.
-          editUrl: "https://github.com/OneStep-elecTRON/onestep-electron-content",
+          editUrl:
+            "https://github.com/OneStep-elecTRON/onestep-electron-content",
         },
         blog: {
           showReadingTime: true,
