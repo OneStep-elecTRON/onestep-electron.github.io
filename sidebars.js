@@ -1,4 +1,6 @@
-module.exports = {
+
+/** @type {import('@docusaurus/plugin-content-docs').SidebarsConfig} */
+const sidebars = {
   learningTracksSidebar: {
     Introduction: ["machine-learning-tracks-introduction"],
     "PyData Tutorials": [
@@ -27,3 +29,5 @@ module.exports = {
     "Part 3": ["PythonCrashCourse/part3"],
   },
 };
+
+module.exports = sidebars;

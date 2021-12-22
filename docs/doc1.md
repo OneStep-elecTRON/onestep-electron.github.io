@@ -4,7 +4,7 @@ title: Style Guide
 sidebar_label: Style Guide
 ---
 
-import { Quiz, Question, AnswerPanel } from "../components/Quiz";
+import { Quiz, Question, AnswerPanel } from "../src/components/Quiz";
 
 You can write content using [GitHub-flavored Markdown syntax](https://github.github.com/gfm/).
 

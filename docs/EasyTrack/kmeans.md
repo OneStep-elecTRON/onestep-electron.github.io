@@ -4,7 +4,7 @@ title: K-Means
 sidebar_label: K-Means
 custom_edit_url: https://github.com/OneStep-elecTRON/onestep-electron-content
 ---
-import { Quiz, Question, AnswerPanel } from "../../components/Quiz";
+import { Quiz, Question, AnswerPanel } from "../../src/components/Quiz";
 
 K-Means clustering or simply clustering is an unsupervised learning technique. Unlike all the other techniques, which all came under supervised learning techniques, Kmeans is considered as unsupervised as there is no solid ground truth to compare our output with. It can only help us to determine the structure of our data and find smaller groups of data within our main data set. <br/>
 

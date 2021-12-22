@@ -4,7 +4,7 @@ title: K-Nearest Neighbors (KNN)
 sidebar_label: K-Nearest Neighbors (KNN)
 custom_edit_url: https://github.com/OneStep-elecTRON/onestep-electron-content
 ---
-import { Quiz, Question, AnswerPanel } from "../../components/Quiz";
+import { Quiz, Question, AnswerPanel } from "../../src/components/Quiz";
 
 We have seen many Classification algorithms so far and now it is time for us to explore KNN. K-Nearest neighnors or KNN is a supervised learning technique which can be used for both classification and regression type problems. But mostly, KNNs are used for classification. Compared to others, KNN is very simple to understand and implement. Let's try to understand it with help of some examples and diagrams.<br/>
 
