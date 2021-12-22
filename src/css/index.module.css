@@ -1,0 +1,28 @@
+.header {
+  height: calc(100vh - 60px);
+  display: flex;
+  padding: 24px 60px;
+}
+
+.header_content {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 30px;
+}
+
+.header_title {
+  color: var(--ifm-color-primary);
+  font-size: 40px;
+}
+
+.header_img_wrapper {
+  height: 100%;
+  padding: 30px;
+  text-align: center;
+}
+
+.header_img {
+  width: 80%;
+}
